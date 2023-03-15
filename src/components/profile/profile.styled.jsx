@@ -13,3 +13,10 @@ export const ProfileStyle = styled.div`
 export const Description = styled.div`
   background-color: green;
 `;
+
+export const Stats = styled.ul`
+  li {
+    color: red;
+    list-style: none;
+  }
+`;

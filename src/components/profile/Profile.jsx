@@ -1,4 +1,4 @@
-import { ProfileStyle, Description } from './profile.styled';
+import { ProfileStyle, Description, Stats } from './profile.styled';
 
 const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
@@ -12,7 +12,7 @@ const Profile = props => {
         <p className="location">{location}</p>
       </Description>
 
-      <ul className="stats">
+      <Stats>
         <li>
           <span className="label">Followers</span>
           <span className="quantity">{stats.followers}</span>
@@ -25,7 +25,7 @@ const Profile = props => {
           <span className="label">Likes</span>
           <span className="quantity">{stats.likes}</span>
         </li>
-      </ul>
+      </Stats>
     </ProfileStyle>
   );
 };

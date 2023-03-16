@@ -1,4 +1,14 @@
-import { ProfileStyle, Description, Stats } from './profile.styled';
+import {
+  ProfileStyle,
+  Description,
+  Stats,
+  ImageAvatar,
+  Name,
+  Tag,
+  Location,
+  Label,
+  Quantity,
+} from './profile.styled';
 
 const Profile = props => {
   const { username, tag, location, avatar, stats } = props;
@@ -6,24 +16,24 @@ const Profile = props => {
   return (
     <ProfileStyle>
       <Description>
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+        <ImageAvatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
       </Description>
 
       <Stats>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
         </li>
       </Stats>
     </ProfileStyle>

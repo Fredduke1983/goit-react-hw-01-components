@@ -1,42 +1,34 @@
-import {
-  ProfileStyle,
-  Description,
-  Stats,
-  ImageAvatar,
-  Name,
-  Tag,
-  Location,
-  Label,
-  Quantity,
-} from './profile.styled';
+import user from 'data/user.json';
 
-const Profile = props => {
-  const { username, tag, location, avatar, stats } = props;
+import * as css from './profile.styled';
+
+const Profile = () => {
+  const { username, tag, location, avatar, stats } = user;
 
   return (
-    <ProfileStyle>
-      <Description>
-        <ImageAvatar src={avatar} alt={username} />
-        <Name>{username}</Name>
-        <Tag>@{tag}</Tag>
-        <Location>{location}</Location>
-      </Description>
+    <css.ProfileStyle>
+      <css.Description>
+        <css.ImageAvatar src={avatar} alt={username} />
+        <css.Name>{username}</css.Name>
+        <css.Tag>@{tag}</css.Tag>
+        <css.Location>{location}</css.Location>
+      </css.Description>
 
-      <Stats>
+      <css.Stats>
         <li>
-          <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <css.Label>Followers</css.Label>
+          <css.Quantity>{stats.followers}</css.Quantity>
         </li>
         <li>
-          <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <css.Label>Views</css.Label>
+          <css.Quantity>{stats.views}</css.Quantity>
         </li>
         <li>
-          <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <css.Label>Likes</css.Label>
+          <css.Quantity>{stats.likes}</css.Quantity>
         </li>
-      </Stats>
-    </ProfileStyle>
+      </css.Stats>
+    </css.ProfileStyle>
   );
 };
 

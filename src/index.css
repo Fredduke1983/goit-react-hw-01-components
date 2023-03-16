@@ -16,10 +16,18 @@ code {
 
 p,
 ul,
-li {
+li,
+h1,
+h2,
+h3 {
   padding: 0;
   margin: 0;
 }
 li {
   list-style: none;
+}
+
+g {
+  justify-content: center;
+  margin: 0 auto;
 }

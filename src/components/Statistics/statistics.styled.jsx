@@ -29,11 +29,6 @@ const Item = styled.li`
   height: 50px;
 
   color: #fff;
-  ${
-    '' /* background-color: ${props => {
-    console.log(props.id);
-  }}; */
-  }
 
   &#card0 {
     background-color: green;

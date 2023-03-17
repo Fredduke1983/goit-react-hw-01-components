@@ -6,6 +6,13 @@ const Statistics = styled.section`
   box-shadow: 1px 1px 5px grey;
 `;
 
+const TitleWrap = styled.div`
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Title = styled.h2``;
 const StatList = styled.ul`
   display: flex;
@@ -14,12 +21,38 @@ const StatList = styled.ul`
 
 const Item = styled.li`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid #80808057;
+
   width: 20%;
+  height: 50px;
+
+  color: #fff;
+  ${
+    '' /* background-color: ${props => {
+    console.log(props.id);
+  }}; */
+  }
+
+  &#card0 {
+    background-color: green;
+  }
+  &#card1 {
+    background-color: red;
+  }
+  &#card2 {
+    background-color: blue;
+  }
+  &#card3 {
+    background-color: black;
+  }
+  &#card4 {
+    background-color: violet;
+  }
 `;
 
 const Label = styled.span``;
 const Percentage = styled.span``;
 
-export { Item, Statistics, Title, StatList, Label, Percentage };
+export { Item, Statistics, Title, StatList, Label, Percentage, TitleWrap };

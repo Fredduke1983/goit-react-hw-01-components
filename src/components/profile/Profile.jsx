@@ -1,10 +1,7 @@
-import user from 'data/user.json';
-
 import * as css from './profile.styled';
+import PropTypes from 'prop-types';
 
-const Profile = () => {
-  const { username, tag, location, avatar, stats } = user;
-
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <css.ProfileStyle>
       <css.Description>
@@ -32,4 +29,14 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};

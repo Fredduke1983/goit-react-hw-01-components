@@ -1,15 +1,25 @@
 import StatArray from './StatArray';
 import * as css from './statistics.styled';
+import PropTypes from 'prop-types';
 
-const Statistics = () => {
+export const Statistics = ({ title, stats }) => {
   return (
     <css.Statistics>
-      <css.Title>Upload stats</css.Title>
+      <css.TitleWrap>{title && <css.Title>{title}</css.Title>}</css.TitleWrap>
       <css.StatList>
-        <StatArray />
+        <StatArray stats={stats} />
       </css.StatList>
     </css.Statistics>
   );
 };
 
-export default Statistics;
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
+};

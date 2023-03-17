@@ -1,5 +1,5 @@
 import { StatArray } from './StatArray';
-import * as css from './statistics.styled';
+import * as css from './statistics.styled.jsx';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {

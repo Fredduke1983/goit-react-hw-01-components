@@ -1,4 +1,4 @@
-import { Transaction, THead } from './transaction.styled';
+import { Transaction, THead } from './transaction.styled.jsx';
 
 export const TransactionHistory = props => {
   return (

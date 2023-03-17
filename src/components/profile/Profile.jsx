@@ -1,4 +1,4 @@
-import * as css from './profile.styled';
+import * as css from './profile.styled.jsx';
 import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {

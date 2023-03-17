@@ -1,6 +1,6 @@
 import * as css from './statistics.styled';
 
-const StatArray = props => {
+export const StatArray = props => {
   return props.stats.map(({ id, label, percentage }, index) => {
     return (
       <css.Item key={id} id={'card' + index}>
@@ -10,4 +10,3 @@ const StatArray = props => {
     );
   });
 };
-export default StatArray;

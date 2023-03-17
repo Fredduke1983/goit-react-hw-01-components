@@ -1,4 +1,4 @@
-import StatArray from './StatArray';
+import { StatArray } from './StatArray';
 import * as css from './statistics.styled';
 import PropTypes from 'prop-types';
 

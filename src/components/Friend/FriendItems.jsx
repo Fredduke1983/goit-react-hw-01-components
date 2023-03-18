@@ -1,4 +1,4 @@
-const { FriendLi, Status, Avatar, Name } = require('./friendList.styled');
+import { FriendLi, Status, Avatar, Name } from './friendItems.styled';
 
 export const FriendItems = ({ avatar, name, isOnline }) => {
   return (

@@ -6,14 +6,13 @@ const Statistics = styled.section`
   box-shadow: 1px 1px 5px grey;
 `;
 
-const TitleWrap = styled.div`
+const Title = styled.h2`
   display: flex;
   height: 80px;
   justify-content: center;
   align-items: center;
 `;
 
-const Title = styled.h2``;
 const StatList = styled.ul`
   display: flex;
   justify-content: center;
@@ -50,4 +49,4 @@ const Item = styled.li`
 const Label = styled.span``;
 const Percentage = styled.span``;
 
-export { Item, Statistics, Title, StatList, Label, Percentage, TitleWrap };
+export { Item, Statistics, Title, StatList, Label, Percentage };

@@ -1,13 +1,13 @@
-import { StatArray } from './StatArray';
+import { StatList } from './StatList';
 import * as css from './statistics.styled.jsx';
 import PropTypes from 'prop-types';
 
 export const Statistics = ({ title, stats }) => {
   return (
     <css.Statistics>
-      <css.TitleWrap>{title && <css.Title>{title}</css.Title>}</css.TitleWrap>
+      {title && <css.Title>{title}</css.Title>}
       <css.StatList>
-        <StatArray stats={stats} />
+        <StatList stats={stats} />
       </css.StatList>
     </css.Statistics>
   );
